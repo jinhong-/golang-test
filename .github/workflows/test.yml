@@ -17,8 +17,11 @@ jobs:
         go-version: '^1.14.1'
     - name: golangci-lint
       uses: reviewdog/action-golangci-lint@v1.1.3
+      env:                                                                    
+          GOROOT: "/usr/local/go" 
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        
     - run: go get gotest.tools/gotestsum
     - run: gotestsum --junitfile junit.xml
     - uses: jinhong-/action-surefire-report@v1.0.2-hotfix2
