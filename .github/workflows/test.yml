@@ -21,7 +21,7 @@ jobs:
         go-version: '^1.14.1'
     - run: go get gotest.tools/gotestsum
     - run: gotestsum --junitfile junit.xml
-    - uses: jinhong-/action-surefire-report@v1.0.2-hotfix
+    - uses: jinhong-/action-surefire-report@v1.0.2-hotfix2
       if: always()
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
