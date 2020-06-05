@@ -11,3 +11,7 @@ func main() {
 func Sum(x int, y int) int {
 	return x + y
 }
+
+func someUnused_func() {
+
+}
