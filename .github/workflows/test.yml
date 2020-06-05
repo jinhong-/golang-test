@@ -20,8 +20,8 @@ jobs:
       with:
         go-version: '^1.14.1'
     - run: go get gotest.tools/gotestsum
-    - run: gotestsum --junitfile unit-tests.xml
-    - uses: ashley-taylor/junit-report-annotations-action@v1.1
+    - run: gotestsum --junitfile junit.xml
+    - uses: IgnusG/jest-report-action@v2.3.2
       if: always()
       with:
         access-token: ${{ secrets.GITHUB_TOKEN }}
