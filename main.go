@@ -9,5 +9,9 @@ func main() {
 }
 
 func Sum(x int, y int) int {
-	return x + y + 1
+	return x + y
+}
+
+func someUnused_func() {
+
 }
