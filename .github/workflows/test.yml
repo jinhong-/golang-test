@@ -21,10 +21,11 @@ jobs:
         go-version: '^1.14.1'
     - run: go get gotest.tools/gotestsum
     - run: gotestsum --junitfile junit.xml
-    - uses: ashley-taylor/junit-report-annotations-action@1.1
+    - uses: ScaCap/action-surefire-report@v1.0.2
       if: always()
       with:
         access-token: ${{ secrets.GITHUB_TOKEN }}
+        report_paths: junit.xml
 
 # pull_request:
 #   branches: [ master ]    
