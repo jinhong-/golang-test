@@ -9,5 +9,5 @@ func main() {
 }
 
 func Sum(x int, y int) int {
-	return x + y
+	return x + y + 1
 }
